@@ -29,8 +29,10 @@ end
 
 def random_question_pair
   questions = {
-      "(behalten) Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven ______" => ["behält", "hatte behalten"],
-      "(beraten) Klinik berät über neues Statement zu Schumacher" => ["berät"],
+      "(behalten) Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven ______" => ["behält", "hat behalten"],
+      "(behalten) Die Polizei ____ mein Geld ____" => "hat behalten",
+      "(beraten) Klinik ____ über neues Statement zu Schumacher" => ["berät"],
+      "(beraten) Hat Bavaria Finanz gut beraten?" => "hat beraten",
       "(sich befinden) ____ sich auch dem Web von Bordeaux nach Westafrika" => ["befand"],
       "(sich befinden) Der Stein ____ sich acht Meter neben der markierten Piste _____" => ["hat befunden"]
   }
