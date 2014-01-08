@@ -16,11 +16,19 @@ def get_attempt
   answer
 end
 
+def report_success
+  puts "Success"
+  puts
+end
 
+def report_error
+  puts "Failure"
+  puts
+end
 
 def random_question_pair
   questions = {
-      "(behalten) Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven" => ["behält"]
+      "(behalten) Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven ______" => ["behält", "hatte behalten"]
   }
   questions.to_a.sample(1)[0]
 end
@@ -34,7 +42,7 @@ attempt = get_attempt
 answer = question_pair[1]
 
 if answer.include?(attempt)
-  puts "Success"
+  report_success
 else
-  puts "Fail"
+  report_error
 end
