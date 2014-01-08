@@ -28,6 +28,7 @@ end
 
 def display_question(question_pair)
   question = question_pair.question
+  question = question.gsub("_", "_______")
   verb = question_pair.verb
   puts "(#{verb}) #{question}"
   puts
@@ -62,12 +63,12 @@ end
 
 def random_question_pair
   questions = [
-      Question.new("behalten", "Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven", "behält"),
-      Question.new("behalten", "Die Polizei ____ mein Geld ____", "hat behalten"),
-      Question.new("beraten", "Klinik ____ über neues Statement zu Schumacher", "berät"),
-      Question.new("beraten", "(beraten) ___ Bavaria Finanz gut ___?", "hat beraten"),
-      Question.new("sich befinden", "____ sich auch dem Web von Bordeaux nach Westafrika", "befand"),
-      Question.new("sich befinden", "Der Stein ____ sich acht Meter neben der markierten Piste _____", "hat befunden")
+      Question.new("behalten", "Schweizer Notenbank _ bei den Gold-Reserven trotz Verlust die Nerven", "behält"),
+      Question.new("behalten", "Die Polizei _ mein Geld _", "hat behalten"),
+      Question.new("beraten", "Klinik _ über neues Statement zu Schumacher", "berät"),
+      Question.new("beraten", "(beraten) _ Bavaria Finanz gut _?", "hat beraten"),
+      Question.new("sich befinden", "Nachfolger _ _ bereits in Entwicklung", "befand sich"),
+      Question.new("sich befinden", "Der Stein _ sich acht Meter neben der markierten Piste _", "hat befunden")
   ]
   questions.sample(1)[0]
 end
