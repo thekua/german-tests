@@ -39,11 +39,12 @@ puts "CATEOGORY: Simple past"
 
 def attempt_question
   question_pair = random_question_pair
-  puts question_pair[0]
+  question = question_pair[0]
+  answer = question_pair[1]
+
+  puts question
   puts
   attempt = get_attempt
-
-  answer = question_pair[1]
 
   if answer.include?(attempt)
     report_success
