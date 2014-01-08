@@ -53,12 +53,16 @@ class Question
     @answer
   end
 
+  def matches?(attempt)
+    @answer.downcase == attempt.downcase
+  end
+
 end
 
 
 def random_question_pair
   questions = [
-      Question.new("behalten", "Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven ______", "behält"),
+      Question.new("behalten", "Schweizer Notenbank _______ bei den Gold-Reserven trotz Verlust die Nerven", "behält"),
       Question.new("behalten", "Die Polizei ____ mein Geld ____", "hat behalten"),
       Question.new("beraten", "Klinik ____ über neues Statement zu Schumacher", "berät"),
       Question.new("beraten", "(beraten) ___ Bavaria Finanz gut ___?", "hat beraten"),
@@ -72,11 +76,10 @@ puts "CATEOGORY: Simple past"
 
 def attempt_question
   question_pair = random_question_pair
-  answer = question_pair.answer
   display_question(question_pair)
   attempt = get_attempt
 
-  if answer === attempt
+  if question_pair.matches?(attempt)
     report_success
   else
     report_error
