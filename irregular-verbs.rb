@@ -1,13 +1,4 @@
 
-
-# Show a question_pair
-# Get the attempt from input
-# Print out yes or not
-#
-#
-#
-#
-
 def get_attempt
   answer = ""
   while answer.empty?
@@ -16,13 +7,13 @@ def get_attempt
   answer
 end
 
-def report_success
+def report_success(question_pair)
   puts "Success"
   puts
 end
 
-def report_error
-  puts "Failure"
+def report_error(question_pair)
+  puts "Failure. The right answer is #{question_pair.answer}"
   puts
 end
 
@@ -63,12 +54,16 @@ end
 
 def random_question_pair
   questions = [
-      Question.new("behalten", "Schweizer Notenbank _ bei den Gold-Reserven trotz Verlust die Nerven", "behält"),
+      Question.new("behalten", "Schweizer Notenbank _ bei den Gold-Reserven trotz Verlust die Nerven", "behielt"),
       Question.new("behalten", "Die Polizei _ mein Geld _", "hat behalten"),
-      Question.new("beraten", "Klinik _ über neues Statement zu Schumacher", "berät"),
-      Question.new("beraten", "(beraten) _ Bavaria Finanz gut _?", "hat beraten"),
-      Question.new("sich befinden", "Nachfolger _ _ bereits in Entwicklung", "befand sich"),
-      Question.new("sich befinden", "Der Stein _ sich acht Meter neben der markierten Piste _", "hat befunden")
+      Question.new("backen", "Ich _ dunkles Brot _","habe gebacken"),
+      Question.new("begreifen", "Er _, dass er etwas vergessen habe", "begriff"),
+      Question.new("begreifen", "Er _, dass er etwas vergaß", "begriff"),
+      Question.new("backen", "Er _ dunkles Brot", "backte"),
+      Question.new("beraten", "Klinik _ über neues Statement zu Schumacher", "beriet"),
+      Question.new("beraten", "_ Bavaria Finanz gut _?", "hat beraten"),
+      Question.new("sich befinden", "Nachfolger _ sich bereits in Entwicklung", "befand sich"),
+      Question.new("sich befinden", "Der Stein _ _ acht Meter neben der markierten Piste _", "hat sich befunden")
   ]
   questions.sample(1)[0]
 end
@@ -81,9 +76,9 @@ def attempt_question
   attempt = get_attempt
 
   if question_pair.matches?(attempt)
-    report_success
+    report_success(question_pair)
   else
-    report_error
+    report_error(question_pair)
   end
 end
 
