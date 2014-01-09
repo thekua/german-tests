@@ -57,12 +57,11 @@ def random_question_pair
       Question.new("behalten", "Schweizer Notenbank _ bei den Gold-Reserven trotz Verlust die Nerven", "behielt"),
       Question.new("behalten", "Die Polizei _ mein Geld _", "hat behalten"),
       Question.new("backen", "Ich _ dunkles Brot _","habe gebacken"),
-      Question.new("begreifen", "Er _, dass er etwas vergessen habe", "begriff"),
-      Question.new("begreifen", "Er _, dass er etwas vergaß", "begriff"),
+      Question.new("begreifen", "Er _, daß er etwas vergessen hatte", "begriff"),
       Question.new("backen", "Er _ dunkles Brot", "backte"),
       Question.new("beraten", "Klinik _ über neues Statement zu Schumacher", "beriet"),
       Question.new("beraten", "_ Bavaria Finanz gut _?", "hat beraten"),
-      Question.new("sich befinden", "Nachfolger _ sich bereits in Entwicklung", "befand sich"),
+      Question.new("sich befinden", "Nachfolger _ _ bereits in Entwicklung", "befand sich"),
       Question.new("sich befinden", "Der Stein _ _ acht Meter neben der markierten Piste _", "hat sich befunden")
   ]
   questions.sample(1)[0]
