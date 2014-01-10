@@ -64,7 +64,7 @@ def random_question_pair
       Question.new("sich befinden", "Nachfolger _ _ bereits in Entwicklung", "befand sich"),
       Question.new("sich befinden", "Der Stein _ _ acht Meter neben der markierten Piste _", "hat sich befunden"),
       Question.new("sich bewarben", "Als neuer Trainer Trapattoni _ _ offenbar in Hannover", "bewarb sich"),
-      Question.new("sich bewarben", "200.000 Menschen _ _ um ein Ticket nach Mars _", "hatten sich beworben"),
+      Question.new("sich bewarben", "200.000 Menschen _ _ um ein Ticket nach Mars _", "haben sich beworben"),
       Question.new("bitten", "Ich _ meinen Sitznachbarn, mir meinen Platz frei zu halten", "bat"),
       Question.new("bestehen", "Das „Bistro Auf Schalke“ _ seine at  _", "hat bestanden"),
       Question.new("betreten", "38-Jähriger _ Landesgericht mit Cannabis im Gepäck", "betrat"),
