@@ -70,7 +70,7 @@ def random_question_pair
       Question.new("betreten", "38-Jähriger _ Landesgericht mit Cannabis im Gepäck", "betrat"),
       Question.new("betreten", "38-Jähriger _ Landesgericht mit Cannabis im Gepäck _", "hat betreten"),
       Question.new("bieten", "Der Laden _ Sonderrabatte während des Sommer", "bot"),
-      Question.new("bieten", "Der Laden _ Sonderrabatte während des Sommer _", "hat getboten"),
+      Question.new("bieten", "Der Laden _ Sonderrabatte während des Sommer _", "hat geboten"),
       Question.new("bitten", "Wer _ eigentlich Friedrich _?", "hat gebeten"),
       #Question.new("", "", ""),
 
